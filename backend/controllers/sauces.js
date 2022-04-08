@@ -7,10 +7,7 @@ exports.createScauce = (req, res) => {
     let reghexChar = new RegExp(/[<>;$&"]/g);
     const sauce = new Sauce({
         ...sauceObject,
-        /**  likes: 0,
-          dislikes: 0,
-          usersLiked: [],
-          usersDisliked: [], */
+
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     });
 
