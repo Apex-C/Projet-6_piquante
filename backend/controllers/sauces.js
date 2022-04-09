@@ -4,45 +4,27 @@ const fs = require('fs');
 exports.createScauce = (req, res) => {
     const sauceObject = JSON.parse(req.body.sauce);
     delete sauceObject._id;
-    let reghexChar = new RegExp(/[<>;$&"]/g);
+    // let reghexChar = new RegExp(/[^*><;$&"]/g);
     const sauce = new Sauce({
         ...sauceObject,
-
+        likes: 0,
+        dislikes: 0,
+        usersLiked: [],
+        usersDisliked: [],
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     });
 
-    if (!reghexChar.test(sauce.name)) {
-        return res.status(400).json({
-            message:
-                `Il n'est pas possible d'utiliser les caractères spéciaux dans le nom !`
-        })
+    sauce.save()
+        .then(() => {
+            res.status(201).json({ message: 'Sauce créer correctement !' });
 
-    } else if (!reghexChar.test(sauce.manufacturer)) {
-        return res.status(400).json({
-            message:
-                `Il n'est pas possible d'utiliser les caractères spéciaux dans le fabriquant !`
-        })
-    } else if (!reghexChar.test(sauce.description)) {
-        return res.status(400).json({
-            message:
-                `Il n'est pas possible d'utiliser les caractères spéciaux dans la description !`
-        })
-    }
-    else if (!reghexChar.test(sauce.mainPepper)) {
-        return res.status(400).json({ message: `Il n'est pas possible d'utiliser les caractères spéciaux dans le main pepper !` })
-    }
-    else {
-        sauce.save()
-            .then(() => {
-                res.status(201).json({ message: 'Sauce créer correctement !' });
+        }
+        ).catch((error) => {
+            res.status(400).json({ error: error });
+        }
+        );
+}
 
-            }
-            ).catch((error) => {
-                res.status(400).json({ error: error });
-            }
-            );
-    }
-};
 
 exports.getOneThing = (req, res) => {
     Sauce.findOne({
@@ -150,5 +132,6 @@ exports.likeSauce = (req, res, next) => {
             .catch((error) => res.status(400).json({ error }));
     }
 };
+
 
 
