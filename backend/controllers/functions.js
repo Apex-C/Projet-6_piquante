@@ -8,7 +8,7 @@ function checkPassword(password, res) {
         return true;
     }
     console.log("Format du mot de pass non valide !");
-    res.status(401).json({ message: `Le mot de passe doit contenir entre 8 et 20 characteres avec une lettre majuscule, une lettre miniscule, un caractere special et un chiffre` })
+    res.status(401)
     return false;
 
 }
@@ -22,7 +22,7 @@ function checkEmail(email, res) {
         return true;
     }
     console.log("Format de l'email non valide !");
-    res.status(401).json({ message: `Format de l'email non valide !` })
+    res.status(401)
     return false;
 
 }
