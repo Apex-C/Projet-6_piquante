@@ -1,11 +1,18 @@
 
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
+require('mongoose-type-email');
 
 
 const ModelsUser = mongoose.Schema({
-  email: { type: String, required: true },
-  emailHash: { type: String, required: true, unique: true },
+  email: {
+    type: mongoose.SchemaTypes.Email, type: String,
+    required: true
+  },
+  emailHash: {
+    type: mongoose.SchemaTypes.Email, type: String,
+    required: true, unique: true
+  },
   password: { type: String, required: true },
 
 });
