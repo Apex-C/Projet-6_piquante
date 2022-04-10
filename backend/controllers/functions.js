@@ -8,12 +8,11 @@ function checkPassword(password, res) {
         return true;
     }
     console.log("Format du mot de pass non valide !");
-    res.status(401)
     return false;
 
 }
 
-function checkEmail(email, res) {
+/**function checkEmail(email, res) {
 
     const regularExp = RegExp(/^[\w-\+\.\_]+(\.[\w-\+\.\_]+)*@[\w-\+\.\_]+(\.[\w\+\.\_]+)*(\.[A-Za-z]{2,})$/);
     if (regularExp.test(email)) {
@@ -25,10 +24,10 @@ function checkEmail(email, res) {
     res.status(401)
     return false;
 
-}
+} */
 
 
 
 
 exports.checkPassword = checkPassword;
-exports.checkEmail = checkEmail;
+//exports.checkEmail = checkEmail;
