@@ -13,7 +13,8 @@ const app = express();
 
 app.use(express.json());
 app.use(mongoSanitize())
-app.use(xss()) //  to sanitize user input coming from POST body, GET queries, and url params
+//  to sanitize user input coming from POST body, GET queries, and url params
+app.use(xss())
 // Prevent DOS attacks
 app.use(express.json({ limit: '10kb' })); // Body limit is 10kb
 
@@ -43,9 +44,6 @@ app.use((req, res, next) => {
     );
     next();
 });
-
-
-
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/sauces', sauceRoutes);

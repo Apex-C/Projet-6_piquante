@@ -2,7 +2,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## 🧐 About The Project <a name = "about-the-project"></a>
+## 🧐 About The Project
 
 [![Piquante]
 
@@ -28,13 +28,13 @@ Utiliser un plugin Mongoose pour signaler toute erreur de la base de données.
 - Toutes les routes relatives à la sauce doivent exiger une demande authentifiée (contenant un jeton valide dans son en-tête d'autorisation).
 - Toutes les opérations de la base de données doivent utiliser le pack Mongoose avec des schémas de données stricts.
 
-### 🎯 Objectives <a name = "objectives"></a>
+### 🎯 Objectives
 
 - Implémenter un modèle logique de données conformément à la réglementation
 - Stocker des données de manière sécurisée
 - Mettre en œuvre des opérations CRUD de manière sécurisée
 
-### ⛏️ Built With <a name = "built-with"></a>
+### ⛏️ Built With
 
 -Backend
 
@@ -53,23 +53,22 @@ https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
 
 ### Data ModelsSauce
 
-- userId : String — l'identifiant MongoDB unique de l'utilisateur qui a créé la
+- userId : String —
   sauce
-- name : String — nom de la sauce
-- manufacturer : String — fabricant de la sauce
-- description : String — description de la sauce
-- mainPepper : String — le principal ingrédient épicé de la sauce
-- imageUrl : String — l'URL de l'image de la sauce téléchargée par l'utilisateur
-- heat : Number — nombre entre 1 et 10 décrivant la sauce
-- likes : Number — nombre d'utilisateurs qui aiment (= likent) la sauce
-- dislikes : Number — nombre d'utilisateurs qui n'aiment pas (= dislike) la
+- name : String —
+- manufacturer : String —
+- description : String —
+- mainPepper : String —
+- imageUrl : String —
+- heat : Number —
+- likes : Number —
+- dislikes : Number —
   sauce
-- usersLiked : [ "String <userId>" ] — tableau des identifiants des utilisateurs
+- usersLiked : [ "String <userId>" ] —
   qui ont aimé (= liked) la sauce
-- usersDisliked : [ "String <userId>" ] — tableau des identifiants des
-  utilisateurs qui n'ont pas aimé (= disliked) la sauce
+- usersDisliked : [ "String <userId>" ] —
 
 ### Data ModelUsers
 
-- email : String — adresse e-mail de l'utilisateur [unique]
-- password : String — mot de passe de l'utilisateur haché
+- email : String —
+- password : String —
