@@ -53,22 +53,19 @@ https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
 
 ### Data ModelsSauce
 
-- userId : String —
-  sauce
+- userId : String 
 - name : String —
-- manufacturer : String —
-- description : String —
-- mainPepper : String —
-- imageUrl : String —
-- heat : Number —
-- likes : Number —
-- dislikes : Number —
-  sauce
-- usersLiked : [ "String <userId>" ] —
-  qui ont aimé (= liked) la sauce
-- usersDisliked : [ "String <userId>" ] —
+- manufacturer : String 
+- description : String 
+- mainPepper : String 
+- imageUrl : String 
+- heat : Number 
+- likes : Number 
+- dislikes : Number 
+- usersLiked : [ "String <userId>" ] 
+- usersDisliked : [ "String <userId>" ] 
 
 ### Data ModelUsers
 
-- email : String —
-- password : String —
+- email : String 
+- password : String 
