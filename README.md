@@ -54,7 +54,7 @@ https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
 ### Data ModelsSauce
 
 - userId : String 
-- name : String —
+- name : String 
 - manufacturer : String 
 - description : String 
 - mainPepper : String 
