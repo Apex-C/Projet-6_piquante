@@ -6,11 +6,11 @@ require('mongoose-type-email');
 
 const ModelsUser = mongoose.Schema({
   email: {
-    type: mongoose.SchemaTypes.Email, type: String,
+    type: mongoose.SchemaTypes.Email,
     required: true
   },
   emailHash: {
-    type: mongoose.SchemaTypes.Email, type: String,
+    type: String,
     required: true, unique: true
   },
   password: { type: String, required: true },
