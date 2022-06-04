@@ -1,7 +1,5 @@
 # Projet-6_piquante
 
-<!-- ABOUT THE PROJECT -->
-
 ## 🧐 About The Project
 
 [![Piquante]
@@ -53,19 +51,19 @@ https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
 
 ### Data ModelsSauce
 
-- userId : String 
-- name : String 
-- manufacturer : String 
-- description : String 
-- mainPepper : String 
-- imageUrl : String 
-- heat : Number 
-- likes : Number 
-- dislikes : Number 
-- usersLiked : [ "String <userId>" ] 
-- usersDisliked : [ "String <userId>" ] 
+- userId : String
+- name : String
+- manufacturer : String
+- description : String
+- mainPepper : String
+- imageUrl : String
+- heat : Number
+- likes : Number
+- dislikes : Number
+- usersLiked : [ "String <userId>" ]
+- usersDisliked : [ "String <userId>" ]
 
 ### Data ModelUsers
 
-- email : String 
-- password : String 
+- email : String
+- password : String
